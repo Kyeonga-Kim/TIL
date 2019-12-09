@@ -69,7 +69,7 @@
 
 #### 5) TCP /IP protocol
 
-![osi7](C:\Users\Administrator\Desktop\TIL\Azure\images\osi7.JPG)
+![osi7](../../../../../Program Files/Typora/UsersAdministratorDesktopTILAzureimages/osi7-1575885206776.JPG)
 
 
 
