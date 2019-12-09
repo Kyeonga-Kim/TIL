@@ -69,7 +69,7 @@
 
 #### 5) TCP /IP protocol
 
-![osi7](C:\Users\Administrator\Desktop\TIL\Azure\osi7.JPG)
+![osi7](C:\Users\Administrator\Desktop\TIL\Azure\images\osi7.JPG)
 
 
 
