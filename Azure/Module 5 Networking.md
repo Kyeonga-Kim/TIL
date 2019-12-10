@@ -69,7 +69,7 @@
 
 #### 5) TCP /IP protocol
 
-![osi7](../../../../../Program Files/Typora/UsersAdministratorDesktopTILAzureimages/osi7-1575885206776.JPG)
+![osi7](images/osi7.JPG)
 
 #### 6) IP Address 
 
