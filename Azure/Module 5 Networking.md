@@ -71,8 +71,6 @@
 
 ![osi7](../../../../../Program Files/Typora/UsersAdministratorDesktopTILAzureimages/osi7-1575885206776.JPG)
 
-
-
 #### 6) IP Address 
 
 인터넷 상에서 목적지를 찾는 주소체계. 32Bit로 구성(43억개 만들수 있음)
