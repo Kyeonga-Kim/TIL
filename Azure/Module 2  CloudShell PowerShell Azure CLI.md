@@ -22,8 +22,6 @@
 >
 >   
 >
->   ### 
->
 >   ```powershell
 >   get-command # 모든 명령어 모두 출력(동사-명사형태)
 >   
@@ -60,7 +58,9 @@
 >     
 > ```
 >
-> ![New AZ_VM](images/New AZ_VM.JPG)
+> 
+
+![New AZ_VM](images/New AZ_VM.JPG)
 
 myVM 실행 후 설정해둔 이름, 패쓰워드 입력하면 접속된다!!!!
 
