@@ -200,11 +200,70 @@ ex) 인사부 (100개) , 관리부(60개), 제조부(30개), 영업부(10개)
 
     ​                     192.168.0.0 ~ 192.168.255.255
 
-  * public ip : 그 외
+  * public ip : 그 외 
 
-   
+    *Azure에서 10.10.0.0/16 (1~3는 Azure가 고정예약해둠) 
 
+  #### 3) IP Subnets
+
+  * 29bit까지 Subnet Mask사용
   
-
+    `*원격 : RDP(3389) , MS-SQL: TCP(433), Web서비스 : port(80) 을 열어주기`
+  
+  #### 4) VPN (Virtual Private Network)
+  
+  원격으로  집 <-> 회사내 네트워크로 접근할 수 있는 터널링하는 네트워크
+  
+  * 터널링기술
+  
+     1) PPTP 
+  
+    ​    사용 잘 안함
+  
+     2) L2TP / IPSec
+  
+    ​     암호화 기술
+  
+     3) SSTP 
+  
+    ​    TCP Port(443)사용 
+  
+     4) IKEv2 
+  
+      세션을 서버에서 자동 접속 ( 가장 최신 버전)
+  
+  * VPN 종류
+  
+    ![vpn종류](images/vpn종류.JPG)
+  
+    1) P2S (Point to Site) VPN
+  
+    ​    사용자가(개인) VPN으로 회사내(Azure VNet)으로 접속.
+  
+    ​    *`반드시 연결 셋팅을 해줘야함`
+  
+    2)  Site to Site VPN
+  
+    ​     회사(On-Premises network)와 회사내 접속
+  
+      *`연결 셋팅 해줄 필요가 없음` 
+  
+    3) VNet to VNet VPN
+  
+    ​    다른 데이터센터의 VM끼리 접속
+    ex) West US VNet <-> East US VNet1
+  
+    4) VNet peering 
+  
+    ​    같은 데이터센터안에 있는 VM끼리 접속
+  
+    ex) East US VNet1 <-> East US VNet2
+  
+    
+  
+  
+  
+  
+  
   
 
