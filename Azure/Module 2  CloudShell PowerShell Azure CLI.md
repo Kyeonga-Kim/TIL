@@ -58,9 +58,9 @@
 >     
 > ```
 >
-> 
+> ![New AZ_VM](images/New AZ_VM-1575964525312.JPG)
 
-![](images/New AZ_VM-1.jpg)
+
 
 myVM 실행 후 설정해둔 이름, 패쓰워드 입력하면 접속된다!!!!
 
