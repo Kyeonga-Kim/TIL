@@ -1,12 +1,18 @@
 ##  Module 2 : Microsoft Azure management tool ( CloudShell/ PowerShell/ Azure CLI)
 
-### 1) Cloud Shell 
+### 1. Cloud Shell 
 
 > Auzre Portal에서 사용할 수 있는 쉘 ( PowerShell, Bash)
 
 
 
-### 2) Power Shell
+### 2. Power Shell
+
+#### 1) Az 모듈설치 
+
+https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.8.0&viewFallbackFrom=azps-1.2.0
+
+
 
 > window에서 사용가능한 쉘
 >
@@ -22,21 +28,25 @@
 >
 >   
 >
->   ```powershell
->   get-command # 모든 명령어 모두 출력(동사-명사형태)
+>   > ```powershell
+>   > get-command # 모든 명령어 모두 출력(동사-명사형태)
+>   > 
+>   > get-process # 현재 작업관리자 (사용 Cpu등 출력)
+>   > 
+>   > get-module # 각 모듈을 조회
+>   > 
+>   > Step1. Install-Module -Name Az -AllowClobber # Azure Module설치
+>   > 
+>   > Step2. import-module Az.Accounts # Azure Module등록
+>   > 
+>   > Step3. Connect-AzAccount # Azure에 접속
+>   > 
+>   > Step4. Get-AzSubscription # Subscription 확인
+> >        Select-AzSubscription -Subscription <Subscription ID> 
+>   > 
+>   > ```
+>   >
 >   
->   get-process # 현재 작업관리자 (사용 Cpu등 출력)
->   
->   get-module # 각 모듈을 조회
->   
->   Install-Module -Name Az -AllowClobber # Azure Module설치
->   
->   import-module Az.Accounts # Azure Module등록
->   
->   Connect-AzAccount # Azure에 접속
->   
->   ```
->
 >   ![importmoduleAZ](images/importmoduleAZ.JPG)
 >
 > ```powershell
@@ -66,7 +76,7 @@ myVM 실행 후 설정해둔 이름, 패쓰워드 입력하면 접속된다!!!!
 
 
 
-### 3) Azure CLI
+## 2. Azure CLI
 
 > windows, Mac, Linux에서 사용가능한 쉘 
 >
@@ -79,15 +89,17 @@ myVM 실행 후 설정해둔 이름, 패쓰워드 입력하면 접속된다!!!!
 > ##### 1) Azure CLI 설치
 >
 > https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latestazure-cli-2.0.63.msi 
+>
+> 
 
 ​     **관리자 cmd로 들어가면 접속이 안된다. 
 
 > ```shell
-> az  # Azure시작
+> step1. az  # Azure시작
 > 
-> az login #Azure로그인
+> step2. az login #Azure로그인
 > 
-> az account list	# subscription출력
+> step3. az account list	# subscription출력
 > ```
 
 
@@ -140,6 +152,23 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
 ```
 
 
+
+## 3. NAT
+
+* Network Address Translation
+* 내부망을 외부망으로 나가기 위해 사설ip를 공인 ip로 바꿔주는 것
+
+
+
+## 4. Load Balancer (Module 5)
+
+![Load Balancer](images/Load Balancer.JPG)
+
+
+
+![Load Balancer2](images/Load Balancer2.JPG)
+
+* Probe: Backend Pool에 있는 Vm들이 정상 동작하는지 확인 (상태 정검)
 
 
 

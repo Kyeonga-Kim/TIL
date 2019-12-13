@@ -1,6 +1,6 @@
 ## Module 5 : Implementing and managing Azure networking
 
-### * Network 기초
+### 1. Network 기초
 
 #### 1) what is Network?
 
@@ -10,14 +10,22 @@
 
   client : 서비스를 요청하는 쪽(request) / server : 서비스를 응답하는 쪽 (response)
 
-	#### 2) 특징
+  
+
+  #### 2) 특징
 
 * 하드웨어 공유
+
 * 컴퓨터간에 파일 및 디렉터리
-*  공유
+
+* 공유
+
 * 전자메일 등 커뮤니케이션 지원
+
 * 전자뉴스나 www에 의한 정보 공유
+
 * 그룹 웨어를 이용한 사내 협업작업
+
 * 원격지에서 비디오 화상회의 시스템의 사용
 
 #### 3) 스위치
@@ -158,6 +166,8 @@ IPv4 => 32bit, IPv6 => 128bit(2^128)
 
 * CIDR : 2진법으로 표기
 
+  **Q) 2000개 Host가 필요할떄 알맞은 SubnetMask를 CIDR표기법?
+
 #### 10 ) Subnetting
 
 isp에서 부여받은 네트워크 ID로 더 작은 subnet으로 분할하여 사용
@@ -176,7 +186,7 @@ ex) 인사부 (100개) , 관리부(60개), 제조부(30개), 영업부(10개)
 
 
 
-### Azure Virtual Network
+### 2. Azure Virtual Network
 
 #### 1) what is Azure Virtual Network ?
 
@@ -192,7 +202,7 @@ ex) 인사부 (100개) , 관리부(60개), 제조부(30개), 영업부(10개)
 
   #### 2) IP 할당 방법 
 
-  사설 IP를 주로 씀 
+  사설 IP를 주로 씀 (Vnet에 일반적으로 할당)
 
   * private ip : 10.0.0.0 ~ 10.255.255.255
 
@@ -210,27 +220,41 @@ ex) 인사부 (100개) , 관리부(60개), 제조부(30개), 영업부(10개)
   
     `*원격 : RDP(3389) , MS-SQL: TCP(433), Web서비스 : port(80) 을 열어주기`
   
-  #### 4) VPN (Virtual Private Network)
+  #### 4) DNS name
   
-  원격으로  집 <-> 회사내 네트워크로 접근할 수 있는 터널링하는 네트워크
+  * Default - Azure 에서 기본적으로 제공됨(너무 김) 
+  
+  * Custom - AD(Active Directory)에서 MX, TXT record가 할당되어야 한다.
+  
+    ​               - 구입한 Domain과 연동시켜줘야한다.
+  
+  #### 5) VPN (Virtual Private Network)
+  
+  -기본적으로 사설 ip 할당 
+  
+  Azure에서 10.10.10.0/24 (1~3는 Azure가 고정예약해둠)  =>254-3= 251개 사용가능
+  
+  -원격으로  집 <-> 회사내 네트워크로 접근할 수 있는 터널링하는 네트워크
   
   * 터널링기술
   
-     1) PPTP 
+    1) PPTP 
   
     ​    사용 잘 안함
   
      2) L2TP / IPSec
   
-    ​     암호화 기술
+    ​     암호화 기술 
   
      3) SSTP 
   
-    ​    TCP Port(443)사용 
+    ​    TCP Port(443) 1개만 사용  (자동 암호화)
   
      4) IKEv2 
   
-      세션을 서버에서 자동 접속 ( 가장 최신 버전)
+       -세션을 서버에서 자동 접속 (가장 최신 버전)
+  
+       -접속이 끊겨도 서버에서 자동 연결
   
   * VPN 종류
   
@@ -238,28 +262,71 @@ ex) 인사부 (100개) , 관리부(60개), 제조부(30개), 영업부(10개)
   
     1) P2S (Point to Site) VPN
   
-    ​    사용자가(개인) VPN으로 회사내(Azure VNet)으로 접속.
+    ​    사용자가(개인) VPN으로 Azure VNet으로 접속.
   
     ​    *`반드시 연결 셋팅을 해줘야함`
   
+    
+  
     2)  Site to Site VPN
   
-    ​     회사(On-Premises network)와 회사내 접속
+    ​     회사(On-Premises network)라우터 장비와 Azure VNet과 접속
   
       *`연결 셋팅 해줄 필요가 없음` 
   
-    3) VNet to VNet VPN
-  
-    ​    다른 데이터센터의 VM끼리 접속
+    
+    
+  3) VNet to VNet VPN
+    
+  ​    다른 데이터센터의 Azure VNet과 접속
     ex) West US VNet <-> East US VNet1
   
-    4) VNet peering 
-  
-    ​    같은 데이터센터안에 있는 VM끼리 접속
-  
-    ex) East US VNet1 <-> East US VNet2
-  
     
+  
+    4) VNet peering 
+    
+    ​    같은 데이터센터안에 있는 VM끼리 접속
+    
+    ex) East US VNet1 <-> East US VNet2
+    
+    
+  
+  #### * Ping 명령어
+  
+  ICMP로 네트워크 접속 확인
+  
+  
+  
+  #### * Wf .msc 명령어
+  
+  고급 방화벽 열어주는 기능
+  
+  
+  
+  #### * Netstat -na 명령어
+  
+  사용자와 목적지 컴퓨터와 통신여부. 
+  
+  현재 어떤 포트가 열려있는지 확인 가능.
+  
+  
+  
+  #### * Port
+  
+  데이터가 전송되는 통로 
+  
+  1) TCP 80 : 웹 (http: 암호화 X) 접근
+  
+  2) TCP 443 : 웹 (https : 암호화 0 ) 접근
+  
+  3) TCP 3389(RDP:Remote Desktop Protocol) : Window Server 원격 접근
+  
+  4) TCP 22 : SSH (암호화 지원)
+  
+  5) TCP 23 : Telnet (암호화 지원안함)
+  6) TCP 445 : SMB 3.0 공유폴더에 접근
+  
+  7) TCP 1433 : SQL
   
   
   
