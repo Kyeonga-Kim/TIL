@@ -42,11 +42,13 @@ https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.8.0&
 >   > Step3. Connect-AzAccount # Azure에 접속
 >   > 
 >   > Step4. Get-AzSubscription # Subscription 확인
-> >        Select-AzSubscription -Subscription <Subscription ID> 
->   > 
 >   > ```
->   >
->   
+> >        Select-AzSubscription -Subscription <Subscription ID> 
+> >
+> >        ```
+> >        
+> >        ```
+>
 >   ![importmoduleAZ](images/importmoduleAZ.JPG)
 >
 > ```powershell
@@ -162,11 +164,11 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
 
 ## 4. Load Balancer (Module 5)
 
-![Load Balancer](images/Load Balancer.JPG)
+![](images/Load Balancer.JPG)
 
 
 
-![Load Balancer2](images/Load Balancer2.JPG)
+![](images/Load Balancer2.JPG)
 
 * Probe: Backend Pool에 있는 Vm들이 정상 동작하는지 확인 (상태 정검)
 

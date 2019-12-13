@@ -80,7 +80,7 @@
 
 
 
-### ![av zone, set](images/av zone, set.JPG)
+### ![](images/av zone, set.JPG)
 
 1) Availability Set (99..95%)
 
