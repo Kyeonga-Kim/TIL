@@ -18,7 +18,7 @@ https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.8.0&
 >
 > * 명령어가 길다.
 >
-> * 복잡하다.
+> * 복잡하다.ㅁ
 >
 > * Powershell ISE : powershell 명령어를 스트립트화 할 수 있다.
 >
