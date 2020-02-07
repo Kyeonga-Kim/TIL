@@ -48,4 +48,4 @@ plot(EpubRules, method="graph", control = list(type="items"),
 #edge: 화살표(선) edge.arrow:lhd->rhd방향으로 화살표
 ```
 
-![](images/apriori plot.JPG)
+![](images/apriori plot-1581053667965.JPG)
