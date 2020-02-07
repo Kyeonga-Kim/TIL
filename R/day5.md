@@ -1,7 +1,3 @@
----
-typora-root-url: C:\Users\student\Desktop\TIL\images
----
-
 ## 연관분석 : Apriori Algorism
 
 ```R
@@ -52,4 +48,4 @@ plot(EpubRules, method="graph", control = list(type="items"),
 #edge: 화살표(선) edge.arrow:lhd->rhd방향으로 화살표
 ```
 
-![](/apriori plot.JPG)
+![](images/apriori plot.JPG)
