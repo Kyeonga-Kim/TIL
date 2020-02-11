@@ -157,9 +157,8 @@ train_mushroom<-mushroom[1:5687,] #train: 70%
 test_mushroom<-mushroom[5688:8124,] #test: 30%
 
 summary(train_mushroom)
-lm(type~cap_shape+cap_surface+cap_color+bruises+odor, data=train_mushroom)
 
-DT<-rpart(type~cap_shape+cap_surface+cap_color,train_mushroom, method="class")
+DT<-rpart(type~.,train_mushroom, method="class") #전체 변수를 독립변수로 지정
 summary(DT)
 
 predict_mush<-predict(DT, test_mushroom, type="class")
