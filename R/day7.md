@@ -1,9 +1,3 @@
----
-typora-root-url: images
----
-
-typora-root-url: images
-
 ## Classification: Naive Bayes(나이브 베이즈)
 
 
@@ -123,8 +117,6 @@ wordcloud(ham$text, max.words = 40, scale = c(5,1))
 
 
 ```
-
-
 
 ## Naive Bays적용
 
