@@ -1,6 +1,6 @@
 ## Day11
 
-### 텍스트 마이닝
+### Text Mining(텍스트 마이닝)
 
 ``` R
 library(tm)
