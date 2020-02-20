@@ -239,7 +239,6 @@ str(iris_results)
 iris_str<-iris_results$net.result
 cor(iris_str, iris_test$Petal.Width) #0.9640332
 
-
 #hidden=5로 줬을때
 iris_model5<-neuralnet(formula = Petal.Width~., data=iris_train, hidden=5)
 plot(iris_model5) #error: 1.064656, steps:31324
