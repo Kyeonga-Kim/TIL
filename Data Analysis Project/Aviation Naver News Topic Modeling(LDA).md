@@ -10,9 +10,9 @@
 
 "KIS(한국신용평가) 당사는 스페셜 리포트를 통해 코로나 19확산으로 부터 가장 직접적이고 즉각적인 영향을 받는 주요산업은 항공산업이다. 중국과의 밀접한 경제관계 및 인적 교류 상태를 감안할때, 부정적인 파급효과가 불가피하다."라고 설명하였다.
 
-![](C:\Users\student\Desktop\TIL\images\1.jpg)
+![](images/1.jpg)
 
-![](C:\Users\student\Desktop\TIL\images\2.jpg)
+![](images/2.jpg)
 
 [출처: KIS 한국신용평가 Special Report ]
 
