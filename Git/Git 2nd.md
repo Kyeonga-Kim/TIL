@@ -108,7 +108,7 @@ git remote -v
 git remote rm origin #origin 이름의 원격 저장소 설정을 삭제
 ```
 
-##### 4) 원격 저장소에서 local로 가져오기 
+##### 4) 원격 저장소에서 local로 가져오기  ***
 
 * 타 local에서 원격 저장소에서 가져오기 (최초 한번만)
 
@@ -116,7 +116,7 @@ git remote rm origin #origin 이름의 원격 저장소 설정을 삭제
   git clone http://~ #내가 가져올 폴더의 url 입력 , 그 후 add-commit-push 작업 가능 
   ```
 
-* 내 local에서 원격저장소에 있는 파일 가져오기. ( pull 명령어로 협업 작업 가능)
+* 내 local에서 원격저장소에 있는 파일 가져오기. ( pull 명령어 시작 후 협업 작업 가능)
 
 ``` bash
 git pull origin master #원격 저장소 변경사항(이력)가져오기. 
