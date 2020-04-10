@@ -4,7 +4,7 @@
 
 ### 1. Git 이란?
 
-![](C:\Users\student\Desktop\TIL\Git\images\git 구조.png)
+![git 구조](C:\Users\student\Desktop\TIL\Git\images\git 구조.png)
 
 >  리누스 토르발스에 의해 만들어진 분산형 버전 관리 시스템.  Git은 개인적으로 운영할 수도 있지만 거의 대부
 >
@@ -34,7 +34,7 @@ git status #push 하기 전 Staging Area에 있는 git 상태 확인
 
 ```
 
-![](C:\Users\student\Desktop\TIL\Git\images\200410_1.JPG)
+![200410_1](C:\Users\student\Desktop\TIL\Git\images\200410_1.JPG)
 
 > 트래킹 되고 있지 않은 파일들.
 > git으로 버전을 남긴적이 없는 파일.
