@@ -4,7 +4,7 @@
 
 ### 1. Git 이란?
 
-
+![git 구조](images/git 구조.png)
 
 ![git 구조](git 구조.png)
 
