@@ -12,7 +12,6 @@
 
 > * Github:  원격저장소(Local Repository) 역할을 해주는 서비스 
 > * 그 외 Gitlab, Bitbucket등이 있다.
-> * 
 
 ### 1-1. Git 동작 원리
 
@@ -122,5 +121,13 @@ git remote rm origin #origin 이름의 원격 저장소 설정을 삭제
 git pull origin master #원격 저장소 변경사항(이력)가져오기. 
 ```
 
+### 4. Vi(Vim)
 
+CLI 환경에서 쓸수 있는 텍스트 에디터 중 하나이며,  commit 하는 과정에서 메세지 옵션을 쓰지 않으면 나타난다.
 
+``` bash
+git commit
+```
+
+> * i   : 텍스트 편집 모드
+> * esc + :wq  :편집기 나가기
