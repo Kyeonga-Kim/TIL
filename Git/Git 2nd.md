@@ -30,14 +30,13 @@
 ```bash
 touch test.txt # 텍스트 파일 생성 
 
-git status #push 하기 전 Staging Area에 있는 git 상태 확인
+** git status #push 하기 전 Staging Area에 있는 git 상태 확인
 
 ```
 
 ![200410_1](images/200410_1.JPG)
 
-> 트래킹 되고 있지 않은 파일들.
-> git으로 버전을 남긴적이 없는 파일.
+> untracked file~ :트래킹 되고 있지 않은 파일들. git으로 버전을 남긴적이 없는 파일.
 
 ```bash
 ls # 파일 내역 확인
@@ -120,6 +119,14 @@ git remote rm origin #origin 이름의 원격 저장소 설정을 삭제
 ``` bash
 git pull origin master #원격 저장소 변경사항(이력)가져오기. 
 ```
+
+##### 5) 공유가 될 필요가 없는 파일
+
+``` bash
+git ignore
+```
+
+
 
 ### 4. Vi(Vim)
 
