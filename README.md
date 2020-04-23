@@ -12,7 +12,7 @@
 
   * Cloud 기초
   * Module 2 : Cloudshell , Powershell Azure
-  * Module 4  
+  * Module 4  : WebApp / Wordpress
   * Module 3 : Virtual Machine Scale Sets
   * Module 5 : Networking
   * Module 6 : Azure Storage and SQL
@@ -21,11 +21,14 @@
 
 * Baekjoon Algorism: 백준알고리즘 문제 풀이
 
-* Github 
+* Github : Git Tutorial 
 
-* Maching Learning / Deep Learning
+  * [github tutorial](https://guides.github.com/)
+  * [gitMonkey](https://backlog.com/git-tutorial/kr/)
 
-* Python : Python Basic - Python Analysis
+* Maching Learning / Deep Learning : Kaggle이나 Opendata를 이용한  머신러닝과 딥러닝 분석
+
+* Python : Python기초 문법 (Pandas, Numpy) 과  Python Analysis
 
 * R : R Analysis
 
