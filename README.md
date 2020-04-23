@@ -8,17 +8,26 @@
 
 * 4th Industry 
 
-* Azure Cloud
+* Azure Cloud : MS Azure Cloud의 다양한 모듈 학습 
 
-* Baekjoon Algorism
+  * Cloud 기초
+  * Module 2 : Cloudshell , Powershell Azure
+  * Module 4  
+  * Module 3 : Virtual Machine Scale Sets
+  * Module 5 : Networking
+  * Module 6 : Azure Storage and SQL
+  * Module 7 : Introduction to Container(Docker)
+  * Module 8 : Azure Active Directory  / Azure DNS
 
-* Github
+* Baekjoon Algorism: 백준알고리즘 문제 풀이
+
+* Github 
 
 * Maching Learning / Deep Learning
 
-* Python
+* Python : Python Basic - Python Analysis
 
-* R
+* R : R Analysis
 
   
 
