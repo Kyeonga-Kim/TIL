@@ -2,7 +2,9 @@
 
 #Machine Learning #Deep Learning #Data Analysis
 
-매일 공부한 데이터 분석에 대한 구현 코드와 내용을 각 폴더로 구성하여 기록하였습니다. 저만의 복습 Repo로 사용하고 있으며,  코드 참고 Repo로도 유용하게 이용하고 있는 저장공간입니다. 
+매일 공부한 데이터 분석에 대한 구현 코드와 내용을 각 폴더로 구성하여 기록하였습니다. 
+
+저만의 복습 Repo로 사용하고 있으며,  코드 참고 Repo로도 유용하게 이용하고 있는 저장공간입니다. 
 
 
 
@@ -30,9 +32,9 @@
 
 * Maching Learning / Deep Learning : Kaggle이나 Opendata를 이용한  머신러닝과 딥러닝 분석
 
-* Python : Python기초 문법 (Pandas, Numpy) 과  Python Analysis 
+* Python : Python기초 문법 (Pandas, Numpy) 과  Data Analysis based on Python Language.
 
-* R : R Analysis
+* R : Data Analysis based on R Language.
 
   
 
