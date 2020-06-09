@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Django Template Language</h1>
+    <!-- 1. 반복문 -->
+    <h3>1. 반복문</h3>
+    {% for food in foods %}
+        <p>{{ food }}</p>
+    {% endfor %}
+
+    {% for food in foods %}
+        <p>{{ forloop.counter }} {{food}}</p>
+        <p>{{ forloop.counter0 }} {{food}}</p> <!--0부터 카운팅-->
+    {% endfor %}
+
+    {% for comment in empty_list %}
+        <p>{{ comment }}</p>
+    {% empty %} <!--빈 리스트일때-->
+        <p>댓글이 없습니다 :(</p>
+    {% endfor %}
+
+    <h3>2. 조건문</h3>
+    {% if '짜장면' in foods %}
+        <p>짜장면은 맛있어!</p>
+    {% else %}
+        <p>짜장면 좀 주세요!</p>
+    {% endif %}
+
+    <h3>3. filter</h3>
+    <h4>3.1 length</h4>
+    {% for fruit in fruits %}
+        {% if fruit|length > 5 %}
+            <p>과일 이름이 너무 길어요 ㅠㅠ</p>
+        {% else %}
+            <p>{{fruit}}, {{fruit|length}}</p>
+        {% endif %}
+    {% endfor %}
+    <h4>3.2 truncate</h4> <!--글자 수 제한-->
+    <p>{{ sentence|truncatewords:3}} - 단어 단위로 제한</p>
+    <p>{{ sentence|truncatewords:3}} - 문자 단워로 제한</p>
+
+    <h4>3.3 글자 관련 필터들 </h4>
+        <p>{{ 'ABC'|lower }}</p>
+        <p>{{ sentence|title }}</p>
+        <p>{{ foods|random }}</p>
+
+    <h4>3.4 연산 </h4>
+        <p>{{4|add:6}}</p>
+
+    <h4>3.5 날짜 </h4>
+        <!-- 소문자 불가 -->
+        <p>{{ datetimenow }}</p>
+        <p>{% now 'DATETIME_FORMAT' %}</p>
+        <p>{% now 'SHORT_DATETIME_FORMAT' %}</p>
+        <p>{% now 'DATE_FORMAT' %}</p>
+        <p>{% now 'SHORT_DATE_FORMAT' %}</p>
+
+        <!-- 커스트 마이징 -->
+        <p>{% now 'Y년 m월 d일 (D) h:i' %}</p>
+        <!--  Y : 연도 / m : 월 / d : 일 / D : 요일 / h : 시간 / i : 분 -->
+        <p>{% now 'Y' as current_year %}</p>
+        <p>{{ current_year }}</p>
+
+    
+    <!-- 로렘 입숨 -->
+    <h4>3.6 Lorem </h4>
+        <p>{% lorem %}</p>
+        <!-- 단어 3개 -->
+        <p>{% lorem 3 w %}</p>
+        <!-- 문단 2개 -->
+        <p>{% lorem 2 p %}</p>
+        <!-- 단어 3개 랜덤으로-->
+        <p>{% lorem 3 w random %}</p>
+
+</body>
+</html>
