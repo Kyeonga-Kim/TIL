@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Article Index</h1>
+
+<a href="/articles/new/">New Article</a>
+
+<ul>
+    {% for article in articles %}
+        <li>
+            <a href="/articles/detail/{{ article.pk }}/">{{ article.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
