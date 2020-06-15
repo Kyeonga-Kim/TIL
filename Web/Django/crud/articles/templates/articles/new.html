@@ -4,7 +4,7 @@
 
 <h1>Article New</h1>
 
-<form action="/articles/create/" method="POST">
+<form action="{% url 'articles:new' %}" method="POST">
     {% csrf_token %}
     <label for="title">제목</label>
     <input id="title" type="text" name="title">

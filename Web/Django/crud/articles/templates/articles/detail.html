@@ -12,11 +12,11 @@
     <li>수정 시각: {{ article.updated_at }}</li>
 </ul>
 
-<a href="/articles/index/">목록</a>
+<a href="{% url 'articles:index' %}">목록</a>
 
-<a href="/articles/edit/{{ article.pk }}/">수정</a>
+<a href="{% url 'articles:edit' article.pk %}">수정</a>
 
-<form action="/articles/delete/{{ article.pk }}/" method="POST">
+<form action="{% url 'articles:delete' article.pk %}" method="POST">
     {% csrf_token %}
     <input type="submit" value="삭제!">
 </form>
