@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import login as auth_login, logout as auth_logout 
-from .forms import CustomUserChangeForm
+from .forms import CustomUserChangeForm, ProfileForm
 from django.contrib.auth import update_session_auth_hash
+from .models import Profile
 
 
 # Create your views here.
@@ -18,8 +19,9 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid(): #유효성 검사
             # 3. 유효하다면 database로 저장
-            # 4. 저장 결과 확인이 가능한 페이지로 안내.
             user = form.save()
+            # 4. 저장 결과 확인이 가능한 페이지로 안내.
+            Profile.objects.create(user=user)
             #3-1. 저장했다면, 해당 user로 로그인!
             auth_login(request, user)
 
@@ -123,4 +125,33 @@ def password(request):
     }
     return render(request, 'accounts/password.html', context)
 
+def profile_detail(request):
+    #1:N
+    profile = request.user.profile
+    context={
+        'profile' : profile,
+    }
+    return render(request, 'accounts/profile_detail.html', context)
+
+def profile_edit(request):
+    #현재 로그인된 user의 프로필 가져오기
+    profile = request.user.profile
+
+    if request.method == 'POST':
+        # Profile 업데이트
+        # 1. POST로 넘어온 데이터 form에 넣기.
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        # 2. form에서 유효성 검사
+        if form.is_valid():
+        # 3. 검사를 통과하면 저장
+            form.save()
+        # 4. 결과 확인이 가능한 페이지로 안내
+        return redirect('accounts:profile_detail')
+    else:
+        #form 
+        form = ProfileForm(instance=profile)
+    context={
+        'form' : form,
+    }
+    return render(request, 'accounts/profile_edit.html', context)
 
