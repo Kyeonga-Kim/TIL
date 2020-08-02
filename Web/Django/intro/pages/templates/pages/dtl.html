@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Django Template Language</h1>
+    <h3>1. 반복문</h3>
+    {% for food in foods %}
+        <p>{{ food }}</p>
+    {% endfor %}
+
+    {% for food in foods %}
+        <p>{{ forloop.counter }} {{ food }}</p>
+        <p>{{ forloop.counter0 }} {{ food }}</p>
+    {% endfor %}
+
+    {% for comment in empty_list %}
+        <p>{{ commnet }}</p>
+    {% empty %}
+        <p>댓글이 없습니다 :(</p>
+    {% endfor %}
+
+    <h3>2. 조건문</h3>
+    {% if '짜장면' in foods %}
+        <p>짜장면은 맛있어!</p>
+    {% else %}
+        <p>짜장면 좀 주세요!</p>
+    {% endif %}
+
+    <h3>3. filter</h3>
+    <h4>3-1. length</h4>
+    {% for fruit in fruits %}
+        {% if fruit|length > 5 %}
+            <p>과일 이름이 너무 길어요 ㅠㅠ</p>
+        {% else %}
+            <p>{{ fruit }}, {{ fruit|length }}</p>
+        {% endif %}
+    {% endfor %}
+
+    <h4>3-2. truncate</h4>
+    <p>{{ sentence|truncatewords:3 }} - 단어 단위로 제한</p>
+    <p>{{ sentence|truncatechars:3 }} - 문자 단위로 제한</p>
+
+    <h4>3-3. 글자 관련 필터들</h4>
+    <p>{{ 'ABC'|lower }}</p>
+    <p>{{ sentence|title }}</p>
+    <p>{{ foods|random }}</p>
+
+    <h3>4. 연산</h3>
+    <p>{{ 4|add:6 }}</p>
+
+    <h3>5. 날짜</h3>
+    <p>{{ datetimenow }}</p>
+    <p>{% now 'DATETIME_FORMAT' %}</p>
+    <p>{% now 'SHORT_DATETIME_FORMAT' %}</p>
+    <p>{% now 'DATE_FORMAT' %}</p>
+    <p>{% now 'SHORT_DATE_FORMAT' %}</p>
+
+    <p>{% now 'Y년 m월 d일 (D) h:i' %}</p>
+    <p>{% now 'Y' as current_year %}</p>
+    <p>{{ current_year }}</p>
+
+    <h3>6. Lorem</h3>
+    <p>{% lorem %}</p>
+    <p>{% lorem 3 w random %}</p>
+    <p>{% lorem 2 p %}</p>
+
+
+</body>
+</html>

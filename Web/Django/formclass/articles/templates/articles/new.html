@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Article Index</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <!-- <label for="title">제목</label>
+    <input id="title" type="text" name="title">
+    <label for="content">내용</label>
+    <textarea id ="content" name="content" cols="30" rows="10"></textarea> -->
+   {{ form }}
+    <input type="submit">
+</form>
+
+{% endblock %}

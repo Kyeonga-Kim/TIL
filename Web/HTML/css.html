@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 전체 선택자 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. 태그 선택자 */
+        a {
+            text-decoration: none;
+        }
+
+        /* 3. id 선택자 */
+        #hello {
+            color: yellow;
+        }
+
+        /* 4. class 선택자 */
+        .world {
+            color: red;
+        }
+
+        /* 5. 복합 선택자 - 자손 선택자 */
+        .korea .seoul {
+            color: blue;
+        }
+
+        /* 6. 복합 선택자 - 자식 선택자 */
+        .korea > .seoul {
+            color: green;
+        }
+
+        /* 7. 다중 클래스 선택 */
+        .big {
+            font-size: 40px;
+        }
+
+        .seoul.big {
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="hello">Hello World</h1>
+    <a class="world big" href="https://google.com">Go to Google</a>
+
+    <div class="seoul big">밖에 있는 서울</div>
+    <div class="korea">
+        <div class="seoul">서울</div>
+        <div class="busan">
+            부산
+            <div class="seoul">부산 안 서울</div>
+        </div>
+    </div>
+</body>
+</html>
