@@ -23,7 +23,7 @@
   * Module 7 : Introduction to Container(Docker)
   * Module 8 : Azure Active Directory  / Azure DNS
 
-* Baekjoon Algorism: 백준알고리즘 문제 풀이
+* Algorithm: 백준알고리즘, 프로그래머스 코딩 연습
 
 * Github : Git Tutorial 
 
